@@ -1,24 +1,20 @@
 <view class="contain">
-    <commenttab
-    card="{{card}}"
-    islike="{{islike}}"
-    bindshare="share"
-    bindlike="like"
-    ></commenttab>
+    <commenttab card="{{card}}"></commenttab>
 </view>
 
-<view class="answer" >
+<view class="answer" style="bottom:{{footerbottom}}px" >
     <input placeholder="请输入……"
     bindinput="inputanswer"
-    value='{{inputanswer}}'
-    bindconfirm = "answer"
+    bindfocus="onFocus"
+    bindblur="onBlur"
+    bindfocus="focus"
     />
-    <button class="button" bindtap="answer" >发送</button>
+
+    <button class="button" bindtap="answer">发送</button>
 </view>
 
 <!-- 评论 -->
-<view class="comments">
-<view class="commentlist" s-for="answer">
+<view class="commentlist"s-for="answer">
     <view class="yuepailist">
     <!-- 头像 -->
         <view class="headPhoto">
@@ -34,5 +30,3 @@
             {{item.content}}
         </view>
 </view>
-</view>
-

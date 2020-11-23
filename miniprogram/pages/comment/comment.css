@@ -1,22 +1,32 @@
 .commentlist{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10rpx;
+    background-color: #FEFEFE;
 }
+
+.comments{
+    width: 92vw;
+    margin: auto;
+    box-shadow: 4rpx 0rpx 4rpx rgb(165, 163, 163),
+    0rpx -1rpx 1rpx rgb(165, 163, 163),
+    0rpx 4rpx 4rpx rgb(165, 163, 163),
+    -1rpx 0rpx 1rpx rgb(165, 163, 163);
+    margin-bottom: 80rpx;
+}
+
 .yuepailist{
     width: 90%;
     border-radius: 10rpx;
-    background-color: #F3F5F2;
-    padding: 20rpx;
     position: relative;
+    margin-bottom: 25rpx;
 }
 
 .headPhoto{
     width: 100rpx;
     height: 100rpx;
-    border-radius: 90rpx;
+    border-radius: 50rpx;
     overflow: hidden;
+    float: left;
+    margin: 0 10rpx;
 }
 
 .headPhoto image{
@@ -25,10 +35,7 @@
 }
 
 .information{
-    position: absolute;
-    top: 20rpx;
-    left: 140rpx;
-
+    height: 100rpx;
 }
 
 .information .name{
@@ -45,20 +52,21 @@
 .comment{
     font-size: 30rpx;
     width: 80%;
-    margin-left: 100rpx;
+    margin-left: 120rpx;
 }
 
 .answer{
-
+    background-color: white;
     display: flex;
     align-items: center;
     position: fixed;
-    bottom: 0;
+    bottom: 5rpx;
     left: 0;
+    z-index: 1000;
 }
 
 .answer input{
-    margin: 0 20rpx;
+    margin: 10rpx 20rpx;
     width: 75vw;
     height: 50rpx;
     border: 1rpx rgb(145, 142, 142) solid;
@@ -74,6 +82,7 @@
     height: 60rpx;
     background-color: red;
     border: 1rpx white solid;
+    line-height: 60rpx;
 }
 
 .button::after{

@@ -1,0 +1,47 @@
+<view class="bot">
+<navigator class="contain" catchtap="gotalk" data-id="{{blog.id}}" data-islike="{{blog.islike}}">
+    <view class="yuepailist">
+    <!-- 头像 -->
+        <view class="headPhoto" data-userid="{{blog.userId}}" catchtap="lookuser">
+            <image src="{{blog.user.avatarUrl}}"/>
+        </view>
+
+    <!-- 昵称 -->
+        <view class="information">
+            <view class="name">{{blog.user.nickname}}</view>
+            <view class="school">{{blog.user.location}}</view>
+        </view>
+
+    <!-- 内容 -->
+    <view class="content">
+        {{blog.content}}
+    </view>
+
+    <!-- 照片 -->
+        <view class="photo">
+            <block s-for="{{blog.photo}}">
+                <image src="{{item}}" catchtap="previewimage" data-imagesrc="{{item}}" ></image>
+            </block>
+        </view>
+    </view>
+</navigator>
+    <!-- 点赞分享等 -->
+    <view class="bottom">
+        <view class="like" bindtap = "like" data-id="{{blog.id}}" data-index="{{[blogindex]}}" s-if="{{blog.islike}}">
+            <image src="/images/icon/点赞2.png"></image>
+        </view>
+        <view class="like" bindtap = "like" data-id="{{blog.id}}" data-index="{{[blogindex]}}" s-else>
+            <image src="/images/icon/点赞1.png"></image>
+        </view>
+        <view class="share">
+            <button class="shareicon" bindtap="share" open-type="share" data-id="{{blog.id}}" data-blog="{{blog}}"></button>
+            <image src="/images/icon/转发.png"></image>
+        </view>
+        <view class="talk" catchtap="gotalk" data-id="{{blog.id}}">
+            <image src="/images/icon/聊天.png"></image>
+        </view>
+        <view class="talkinput" catchtap="gotalk" data-id="{{blog.id}}">
+            请输入....
+        </view>
+    </view>
+</view>

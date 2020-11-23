@@ -36,11 +36,11 @@
 }
 .card1{
     width:100%;
-    background-color: #9aa0a0;
+    background: -webkit-linear-gradient(90deg,#dbdcde 0%,#9aa0a0 100%);
 }
 .card2{
     width:100%;
-    background-color:#dbdcde;
+    background:-webkit-linear-gradient(90deg,#dbdcde 0%,#9aa0a0 100%);
 }
 .card-time{
     font-size:15px;

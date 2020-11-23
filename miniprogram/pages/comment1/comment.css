@@ -1,0 +1,81 @@
+.commentlist{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rpx;
+}
+.yuepailist{
+    width: 90%;
+    border-radius: 10rpx;
+    background-color: #F3F5F2;
+    padding: 20rpx;
+    position: relative;
+}
+
+.headPhoto{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 90rpx;
+    overflow: hidden;
+}
+
+.headPhoto image{
+    width: 100%;
+    height: 100%;
+}
+
+.information{
+    position: absolute;
+    top: 20rpx;
+    left: 140rpx;
+
+}
+
+.information .name{
+    margin-top: 10rpx;
+    font-weight: 600;
+}
+
+.information .school{
+    margin-top: 10rpx;
+    font-size: 22rpx;
+    color: rgb(189, 189, 184);
+}
+
+.comment{
+    font-size: 30rpx;
+    width: 80%;
+    margin-left: 100rpx;
+}
+
+.answer{
+
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.answer input{
+    margin: 0 20rpx;
+    width: 75vw;
+    height: 50rpx;
+    border: 1rpx rgb(145, 142, 142) solid;
+    border-radius: 20rpx;
+    padding-left: 4rpx;
+    font-size: 28rpx;
+}
+
+.button{
+    font-size: 26rpx;
+    color: white;
+    width: 120rpx;
+    height: 60rpx;
+    background-color: red;
+    border: 1rpx white solid;
+}
+
+.button::after{
+    border: none;
+}

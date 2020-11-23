@@ -15,7 +15,14 @@
         "pages/detail/detail",
         "pages/smt-image-uploader/smt-image-uploader",
         "pages/others/others",
-        "pages/comment/comment"
+        "pages/comment/comment",
+        "pages/yuepai/yuepai",
+        "pages/personal/personal",
+        "pages/search/search",
+        "pages/fabu/fabu",
+        "pages/comment/comment",
+        "pages/introduce/introduce",
+        "pages/user/user"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -35,7 +42,7 @@
                 "selectedIconPath": "./images/home-2.png"
             },
             {
-                "pagePath": "pages/snap/snap",
+                "pagePath": "pages/yuepai/yuepai",
                 "iconPath": "./image/snap.png",
                 "selectedIconPath": "./images/snap-2.png"
             },
@@ -45,7 +52,7 @@
                 "selectedIconPath": "./images/Message-2.png"
             },
             {
-                "pagePath": "pages/profile/profile",
+                "pagePath": "pages/personal/personal",
                 "iconPath": "./image/profile.png",
                 "selectedIconPath": "./images/profile-2.png"
             }

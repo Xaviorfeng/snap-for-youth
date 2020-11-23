@@ -93,7 +93,10 @@ page {
 }
 
 .card-useName{
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: inline-block;
+    white-space: nowrap;
     position:relative;
     top:-50px;
     margin-left:35%;

@@ -1,0 +1,136 @@
+.contain{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.yuepailist{
+    width: 90vw;
+    border-radius: 10rpx;
+    background-color: #F3F5F2;
+    padding: 10rpx;
+    position: relative;
+    box-shadow: 3rpx 0rpx 3rpx rgb(207, 204, 204),
+    0rpx -1rpx 1rpx rgb(207, 204, 204),
+    0rpx 3rpx 3rpx rgb(207, 204, 204),
+    -1rpx 0rpx 1rpx rgb(207, 204, 204);
+}
+
+.headPhoto{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 90rpx;
+    overflow: hidden;
+    float: left;
+    margin-right: 10rpx;
+}
+
+.headPhoto image{
+    width: 100%;
+    height: 100%;
+}
+
+.information{
+    height: 100rpx;
+
+}
+
+.information .name{
+    margin-top: 10rpx;
+    font-weight: 600;
+}
+
+.information .school{
+    margin-top: 10rpx;
+    font-size: 22rpx;
+    color: rgb(189, 189, 184);
+}
+
+.content{
+    width: 90%;
+    margin-left: 110rpx;
+    font-size: 28rpx;
+}
+
+.photo{
+    width: 90%;
+    margin-left: 100rpx;
+}
+
+.photo image{
+    width: 180rpx;
+    height: 180rpx;
+    margin: 5rpx;
+    float: left;
+}
+
+.bottom{
+    width: calc(90vw + 20rpx);
+    height: 60rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.like{
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.like image{
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.share{
+    width: 40rpx;
+    height: 40rpx;
+    position: relative;
+}
+
+.shareicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38rpx;
+    height: 38rpx;
+    z-index: 2;
+    opacity: 0;
+}
+
+.shareicon::after{
+    border: none;
+}
+
+.share image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.talk{
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.talk image{
+    width: 100%;
+    height: 100%;
+}
+
+.talkinput{
+    width: 520rpx;
+    height: 25rpx;
+    font-size: 18rpx;
+    color: rgb(194, 190, 190);
+    padding: 6rpx;
+    border: 1rpx rgb(182, 179, 179) solid;
+    border-radius: 10rpx;
+}
+
+.bot{
+    margin-bottom: 20rpx;
+}

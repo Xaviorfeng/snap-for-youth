@@ -1,6 +1,5 @@
 .messageCard{
-    margin:1%;
-    border:3px solid #808686;
+    background: #ffffff;
 }
 .sendImage{
     position:relative;
@@ -30,7 +29,7 @@
 }
 .userCard{
     position: relative;
-    background:#808686;
+    background:-webkit-linear-gradient(90deg,#dbdcde 0%,#9aa0a0 100%);
     width:300px;
     height:60px;
 }

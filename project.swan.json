@@ -48,6 +48,39 @@
                 },
                 "id": 3,
                 "text": "pages/comment/comment"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/user/user",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 4,
+                "text": "pages/user/user"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/personal/personal",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 5,
+                "text": "pages/personal/personal"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/yuepai/yuepai",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 6,
+                "text": "pages/yuepai/yuepai"
             }
         ],
         "selected": -1
@@ -61,8 +94,8 @@
     "smartProgramRoot": "miniprogram/",
     "swan": {
         "baiduboxapp": {
-            "swanJsVersion": "3.210.115",
-            "extensionJsVersion": "1.16.2"
+            "extensionJsVersion": "1.16.2",
+            "swanJsVersion": "3.210.115"
         }
     }
 }

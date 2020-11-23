@@ -13,49 +13,6 @@ Page({
     imageList:[],
     isReleaseShow: false,
     height: 0,
-    // cardlist:[
-    //     {
-    //         src: '../../images/photo1.png',
-    //         text: '终于见到干净的海！',
-    //         user: {
-    //             pic: '../../images/shareTitle2.png',
-    //             name: 'Sali',
-    //             position: '南京市.鼓楼区'
-    //         },
-    //         notlove: true
-    //     },
-    //     {
-    //         src: '../../images/photo1.png',
-    //         text: '分享今日的阳光！',
-    //         user: {
-    //             pic: '../../images/photo1.png',
-    //             name: 'Joe',
-    //             position: '南京市.鼓楼区'
-    //         },
-    //         notlove: true
-    //     },
-    //     {
-    //         src: '../../images/photo1.png',
-    //         text: '分享今日的阳光！',
-    //         user: {
-    //             pic: '../../images/photo1.png',
-    //             name: 'Joe',
-    //             position: '南京市.鼓楼区'
-    //         },
-    //         notlove: true
-    //     },
-
-    //     {
-    //         src: '../../images/photo1.png',
-    //         text: '终于见到干净的海！',
-    //         user: {
-    //             pic: '../../images/shareTitle2.png',
-    //             name: 'Sali',
-    //             position: '南京市.鼓楼区'
-    //         },
-    //         notlove: true
-    //     }
-    // ],
     tabs: [{
         name: '一',
         label: '推荐'
@@ -79,27 +36,6 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    // list: [
-    //     {
-    //         imgSrc: '../../images/shareTitle1.png',
-    //         title: '主标题文案六',
-    //         subTitle: '次要信息'
-    //     }
-    // ],
-    horizontalList: [
-        {
-            imgSrc: '../../images/shareTitle1.png',
-            title: '标题文案'
-        },
-        {
-            imgSrc: '../../images/shareTitle1.png',
-            title: '标题文案'
-        },
-        {
-            imgSrc: '../../images/shareTitle1.png',
-            title: '标题文案'
-        }
-    ]
   },
   scroll: function (e) {
     if (this.data.toView == "top") {
@@ -108,6 +44,7 @@ Page({
       });
     }
   },
+  //查看用户详情
   toOthers(e){
     console.log(e.currentTarget.dataset['id']);
     var id = e.currentTarget.dataset['id'];
@@ -116,6 +53,7 @@ Page({
         url: '../others/others?userId='+id
     })
   },
+  //点赞（推荐页面）
   love(e){
     var session_key = app.globalData.session_key;
     //console.log(e.currentTarget.dataset['index']);
@@ -158,6 +96,7 @@ Page({
     })
 
   },
+  //点赞（约拍页面）
   love2(e){
     var session_key = app.globalData.session_key;
     //console.log(e.currentTarget.dataset['index']);
@@ -199,6 +138,7 @@ Page({
     })
 
   },
+  //评论
   comment(e){
       const id = e.currentTarget.dataset['id'];
       console.log(id);
@@ -206,41 +146,7 @@ Page({
         url: '../comment/comment?userId='+id
     })
   },
-  submit(e){
-    var session_key = app.globalData.session_key;
-    var content = this.data.input;
-    var id = this.data.currentId;
-    console.log(content)
-    console.log(id);
-    var that = this;
-    if(content){
-    swan.request({
-        url: "https://baidu.woohoy.com/article",
-        method: 'POST',
-        dataType: 'json',
-        data:{
-            parentId:id,
-            content:content,
-        },
-
-        header: {
-            "Session-key":session_key,
-            'content-type': 'application/json'
-        },
-        success: function(res){
-            console.log(res.data);
-        },
-        fail: function(err){
-            console.log('错误码: '+ err.errCode);
-            console.log('错误信息: '+ err.errMsg);
-
-        }
-    })
-}
-    this.setData({
-        isRelease:false
-    })
-  },
+  //转发
   transmit(e){
     var session_key = app.globalData.session_key;
     //console.log(e.currentTarget.dataset['index']);
@@ -271,11 +177,13 @@ Page({
         }
     })
   },
+  //发布
   toRelease(e){
         swan.navigateTo({
-            url:'../post/post'
+            url:'../fabu/fabu'
         })
   },
+  //查看动态详情
   todetail(e){
     const index = e.currentTarget.dataset['index'];
     const id = this.data.list[index].userId;
@@ -368,36 +276,7 @@ Page({
     })
   },
 
-  onGetUserInfo: function(e) {
-    if (!this.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
-      })
-    }
-  },
 
-  onGetUserid: function() {
-    // 调用云函数
-    swan.cloud.callFunction({
-      name: 'login',
-      data: {},
-      success: res => {
-        console.log('[云函数] [login] user userid: ', res.result.userid)
-        app.globalData.userid = res.result.userid
-        swan.navigateTo({
-          url: '../userConsole/userConsole',
-        })
-      },
-      fail: err => {
-        console.error('[云函数] [login] 调用失败', err)
-        swan.navigateTo({
-          url: '../deployFunctions/deployFunctions',
-        })
-      }
-    })
-  },
   bindInput(e){
     var value=e.detail.value
     console.log(value)
@@ -411,54 +290,6 @@ Page({
         content: e.detail.name,
         activeNameOne: e.detail.name
     })
-},
-  // 上传图片
-  doUpload: function () {
-    // 选择图片
-    swan.chooseImage({
-      count: 1,
-      sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
+}
 
-        swan.showLoading({
-          title: '上传中',
-        })
-
-        const filePath = res.tempFilePaths[0]
-
-        // 上传图片
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
-        swan.cloud.uploadFile({
-          cloudPath,
-          filePath,
-          success: res => {
-            console.log('[上传文件] 成功：', res, cloudPath, filePath)
-
-            app.globalData.fileID = res.fileID
-            app.globalData.cloudPath = cloudPath
-            app.globalData.imagePath = filePath
-
-            swan.navigateTo({
-              url: '../storageConsole/storageConsole'
-            })
-          },
-          fail: e => {
-            console.error('[上传文件] 失败：', e)
-            swan.showToast({
-              icon: 'none',
-              title: '上传失败',
-            })
-          },
-          complete: () => {
-            swan.hideLoading()
-          }
-        })
-
-      },
-      fail: e => {
-        console.error(e)
-      }
-    })
-  },
 })
