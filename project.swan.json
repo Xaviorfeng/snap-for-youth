@@ -81,6 +81,17 @@
                 },
                 "id": 6,
                 "text": "pages/yuepai/yuepai"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/search/search",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 7,
+                "text": "pages/search/search"
             }
         ],
         "selected": -1

@@ -58,6 +58,11 @@
             }
         ]
     },
+    "dynamicLib": {
+        "myDynamicLib": {
+            "provider": "smart-sc"
+        }
+    },
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
         "smt-like": "@smt-ui/content-component/src/like"
