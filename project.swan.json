@@ -1,0 +1,68 @@
+{
+    "appid": "22850148",
+    "cloudfunctionRoot": "cloudfunctions/",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "compilation-args": {
+        "common": {},
+        "options": [
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/post/post",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 0,
+                "text": "pages/post/post"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/smt-image-uploader/smt-image-uploader",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 1,
+                "text": "pages/smt-image-uploader/smt-image-uploader"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/others/others",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 2,
+                "text": "pages/others/others"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/comment/comment",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 3,
+                "text": "pages/comment/comment"
+            }
+        ],
+        "selected": -1
+    },
+    "condition": {},
+    "host": "baiduboxapp",
+    "projectname": "cloud-demo",
+    "setting": {
+        "urlCheck": false
+    },
+    "smartProgramRoot": "miniprogram/",
+    "swan": {
+        "baiduboxapp": {
+            "swanJsVersion": "3.210.115",
+            "extensionJsVersion": "1.16.2"
+        }
+    }
+}

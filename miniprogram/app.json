@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/userConsole/userConsole",
+        "pages/storageConsole/storageConsole",
+        "pages/databaseGuide/databaseGuide",
+        "pages/addFunction/addFunction",
+        "pages/deployFunctions/deployFunctions",
+        "pages/chooseLib/chooseLib",
+        "pages/snap/snap",
+        "pages/message/message",
+        "pages/profile/profile",
+        "pages/componentd/componentd",
+        "pages/post/post",
+        "pages/detail/detail",
+        "pages/smt-image-uploader/smt-image-uploader",
+        "pages/others/others",
+        "pages/comment/comment"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "青约",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#3f3b2a",
+        "selectedColor": "#3f3b2a",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "./image/home.png",
+                "selectedIconPath": "./images/home-2.png"
+            },
+            {
+                "pagePath": "pages/snap/snap",
+                "iconPath": "./image/snap.png",
+                "selectedIconPath": "./images/snap-2.png"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "iconPath": "./image/Message.png",
+                "selectedIconPath": "./images/Message-2.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "iconPath": "./image/profile.png",
+                "selectedIconPath": "./images/profile-2.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "smt-like": "@smt-ui/content-component/src/like"
+    }
+}

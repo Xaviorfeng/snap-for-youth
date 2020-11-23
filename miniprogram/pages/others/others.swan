@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="image-warp">
+        <image src={{image}} class="userImage"></image>
+    </view>
+    <view class="info">
+        <view class="name">{{nickname}}</view>
+        <view class="location">{{location}}</view>
+        <view class="bio">{{bio}}</view>
+    </view>
+    <block s-for="card,index in list" class="card-show" >
+        <view class="card1" s-if="index%2==0">
+            <view class="card-time">{{card.createTime}}</view>
+            <view class="card-location" s-if="card.user.location">{{card.user.location}}</view>
+            <view class="card-location" s-else="card.user.location">...</view>
+            <view class="card-content">{{card.content}}</view>
+            <block s-for="photo,index in list[index].photo">
+                <image src={{photo}} class="photo"></image>
+            </block>
+        </view>
+        <view class="card2" s-if="index%2==1">
+            <view class="card-time">{{card.createTime}}</view>
+            <view class="card-location" s-if="card.user.location">{{card.user.location}}</view>
+            <view class="card-location" s-else="card.user.location">...</view>
+            <view class="card-content">{{card.content}}</view>
+            <block s-for="photo,index in list[index].photo">
+                <image src={{photo}} class="photo"></image>
+            </block>
+        </view>
+    </block>
+</view>
