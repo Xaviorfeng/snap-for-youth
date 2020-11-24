@@ -21,18 +21,6 @@
             bindtabchange="tabsOne">
             <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
         </tabs>
-        <view class="intro">
-            <view>
-                <smt-grid
-                    bind:clickhld="clickHld"
-                    item-class="item"
-                    title-class="title"
-                    sub-title-class="sub-title"
-                    list="{{list}}"
-                    column-num="{{2}}"
-                ></smt-grid>
-            </view>
-        </view>
         <block s-for="card,index in list" class="card-show" s-if="activeNameOne=='一'">
             <view class="card1" s-if="index%2==0">
                 <image src={{card.photo[0]}} mode="scallToFill" class="card-image" bind:tap="todetail" data-index={{index}}></image>
@@ -118,13 +106,4 @@
             <!-- <release class="comment"></release> -->
         </block>
     <image src="../../images/add.png" class="buttonimage" bind:tap="toRelease"></image>
-    <view class="release" s-if="isRelease">
-        <textarea
-            auto-height
-            maxlength="-1"
-            placeholder="请在此输入内容:"
-            bindinput="bindInput"
-            class="text" />
-        <button class="button" bind:tap="submit" >提交</button>
-    </view>
 </view>

@@ -40,6 +40,7 @@ page {
 }
 .card-show{
     column-count:2;
+    position:relative;
 }
 
 .card1{
@@ -47,8 +48,7 @@ page {
     position:absolute;
     margin: 5%;
     background: #fff;
-    width:140px;
-    flex-direction: column;
+    width:320rpx;
     flex-flow: column;
     border-radius: 5%;
     box-shadow: #9aa0a0 0px 0px 5px 3px ;
@@ -57,19 +57,19 @@ page {
 .card2{
     display:inline-flex;
     position:relative;
-    left:150px;
+    left:345rpx;
     margin: 5%;
     background: #fff;
-    flex-direction: column;
     flex-flow: column;
-    width:140px;
+    width:320rpx;
     border-radius: 5%;
     box-shadow: #9aa0a0 0px 0px 5px 3px ;
 }
 
+
 .card-image{
-    width:130px;
-    height:170px;
+    width:300rpx;
+    height:400rpx;
     margin:3%;
 }
 
@@ -285,8 +285,8 @@ page {
     position:fixed;
     background-color: #9aa0a0;
     border-radius: 50%;
-    top:400px;
-    left:260px;
+    bottom:50px;
+    right:30px;
     width:40px;
     height:40px;
     display: block;
