@@ -18,42 +18,20 @@ Page({
         }],
         contentThree: '一',
         activeNameThree: '一',
-        message:[
-            {
-                sendImage: '../../images/photo1.png',
-                sendName:'飞翔的企鹅',
-                sendPosition:'南京 · 南京邮电大学',
-                sendContent:'你拍的太阳真好看，希望可以有一个好心情！',
-                userImage:'../../images/photo1.png',
-                userName:'麻辣小龙虾',
-                userContent:'分享今日的太阳'
-            },
-            {
-                sendImage: '../../images/photo1.png',
-                sendName:'飞翔的企鹅',
-                sendPosition:'南京 · 南京邮电大学',
-                sendContent:'你拍的太阳真好看，希望可以有一个好心情！',
-                userImage:'../../images/photo1.png',
-                userName:'麻辣小龙虾',
-                userContent:'分享今日的太阳'
-            },
-            {
-                sendImage: '../../images/photo1.png',
-                sendName:'飞翔的企鹅',
-                sendPosition:'南京 · 南京邮电大学',
-                sendContent:'你拍的太阳真好看，希望可以有一个好心情！',
-                userImage:'../../images/photo1.png',
-                userName:'麻辣小龙虾',
-                userContent:'分享今日的太阳'
-            }
 
-        ]
 
     },
     tabsThree(e) {
         this.setData({
             contentThree: e.detail.name,
             activeNameThree: e.detail.name
+        })
+    },
+    toOthers(e){
+        var id = e.currentTarget.dataset['id'];
+        console.log(id);
+        swan.navigateTo({
+            url: '../user/user?id='+id
         })
     },
     submit(e){
@@ -76,7 +54,7 @@ Page({
                 'content-type': 'application/x-www-form-urlencoded'
             },
             success: function(res){
-                console.log(res.data);
+                //console.log(res.data);
             },
             fail: function(err){
                 console.log('错误码: '+ err.errCode);
@@ -116,13 +94,13 @@ Page({
                 'content-type':'application/json'
             },
             success: function(res){
-                console.log(res.data);
+                //console.log(res.data);
                 that.setData({
                     userImage:res.data.data.avatarUrl,
                     userName:res.data.data.nickname
                 })
-                console.log(that.data.userImage);
-                console.log(that.data.userName);
+                //console.log(that.data.userImage);
+                //console.log(that.data.userName);
             },
             fail: function(err){
                 console.log('错误码: '+ err.errCode);
@@ -139,7 +117,7 @@ Page({
                 'content-type':'application/json'
             },
             success: function(res){
-                console.log(res.data);
+                //console.log(res.data);
                 that.setData({
                     list:res.data.data.list,
                 })
@@ -161,11 +139,11 @@ Page({
                 'content-type':'application/json'
             },
             success: function(res){
-                console.log(res.data);
+                //console.log(res.data);
                 that.setData({
                     list2:res.data.data.list,
                 })
-                console.log(that.data.list);
+                //console.log(that.data.list);
             },
 
             fail: function(err){

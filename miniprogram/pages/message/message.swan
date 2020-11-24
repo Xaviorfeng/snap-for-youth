@@ -11,7 +11,7 @@
     </tabs>
     <block s-for="card,index in list" s-if="activeNameThree=='一'">
         <view class="messageCard">
-            <image src={{card.notifierUser.avatarUrl}} class="sendImage"></image>
+            <image src={{card.notifierUser.avatarUrl}} class="sendImage" bind:tap = "toOthers" data-id={{card.notifierUser.id}}></image>
             <view class="sendName">{{card.notifierUser.nickname}}</view>
             <view class="sendPosition" s-if={{card.notifierUser.location}}>{{card.notifierUser.location}}</view>
             <view class="sendPosition" s-else={{card.notifierUser.location}}>...</view>
