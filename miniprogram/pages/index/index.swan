@@ -40,8 +40,10 @@
                 class="card-user"
                 bind:tap="toOthers"
                 data-id={{card.user.id}}></image>
-                <view class="card-text">{{card.content}}</view>
-                <view class="card-useName">{{card.user.nickname}}</view>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
                 <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
                 <view class="space" s-else="card.user.location">...</view>
                 <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
@@ -58,8 +60,10 @@
                 class="card-user"
                 bind:tap="toOthers"
                 data-id={{card.user.id}}></image>
-                <view class="card-text">{{card.content}}</view>
-                <view class="card-useName">{{card.user.nickname}}</view>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
                 <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
                 <view class="space" s-else="card.user.location">...</view>
                 <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
@@ -78,8 +82,10 @@
                 class="card-user"
                 bind:tap="toOthers"
                 data-id={{card.user.id}}></image>
-                <view class="card-text">{{card.content}}</view>
-                <view class="card-useName">{{card.user.nickname}}</view>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
                 <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
                 <view class="space" s-else="card.user.location">...</view>
                 <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
@@ -96,8 +102,10 @@
                 class="card-user"
                 bind:tap="toOthers"
                 data-id={{card.user.id}}></image>
-                <view class="card-text">{{card.content}}</view>
-                <view class="card-useName">{{card.user.nickname}}</view>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
                 <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
                 <view class="space" s-else="card.user.location">...</view>
                 <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>

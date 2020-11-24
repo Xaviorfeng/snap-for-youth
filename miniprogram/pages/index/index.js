@@ -1,5 +1,6 @@
 //index.js
 const app = getApp()
+var session_key = app.globalData.session_key;
 
 Page({
   data: {
@@ -50,7 +51,7 @@ Page({
     var id = e.currentTarget.dataset['id'];
     //console.log(id);
     swan.navigateTo({
-        url: '../others/others?userId='+id
+        url: '../user/user?id='+id
     })
   },
   //点赞（推荐页面）
@@ -74,7 +75,7 @@ Page({
     console.log(session_key);
     var that = this
     swan.request({
-        url: "https://baidu.woohoy.com/article/like",
+        url: "https://baidu.woohoy.com/appointment/like",
         method: 'POST',
         dataType: 'json',
         data:{
@@ -117,7 +118,7 @@ Page({
     console.log(session_key);
     var that = this
     swan.request({
-        url: "https://baidu.woohoy.com/article/like",
+        url: "https://baidu.woohoy.com/appointment/like",
         method: 'POST',
         dataType: 'json',
         data:{
@@ -156,7 +157,7 @@ Page({
     //console.log(session_key);
     var that = this
     swan.request({
-        url: "https://baidu.woohoy.com/article/forward",
+        url: "https://baidu.woohoy.com/appointment/forward",
         method: 'POST',
         dataType: 'json',
         data:{
@@ -200,9 +201,10 @@ Page({
       })
       return
     }
+    //var session_key = app.globalData.session_key;
     var that = this
     swan.request({
-        url: "https://baidu.woohoy.com/article",
+        url: "https://baidu.woohoy.com/appointment",
         method: 'GET',
         dataType: 'json',
         data:{},
@@ -210,6 +212,7 @@ Page({
             'content-type':'application/json'
         },
         success: function(res){
+            console.log(res.data);
             var l = res.data.data.list
             for(let i=0;i<l.length;i++){
                 that.data.love.push(false);
@@ -230,15 +233,20 @@ Page({
         }
 
     })
+    var session_key = swan.getStorageSync("session_key");
+    //var session_key = app.globalData.session_key;
+    console.log(session_key)
     swan.request({
-        url: "https://baidu.woohoy.com/article",
+        url: "https://baidu.woohoy.com/appointment/getfollow",
         method: 'GET',
         dataType: 'json',
         data:{},
         header: {
+            "Session-key":session_key,
             'content-type':'application/json'
         },
         success: function(res){
+            console.log(res.data)
             var l = res.data.data.list
             for(let i=0;i<l.length;i++){
                 that.data.followlove.push(false);

@@ -18,8 +18,8 @@
             <view class="sendContent">{{card.notifyComment}}</view>
 
             <view class="userCard" bind:tap="toComment" data-id={{card.id}}>
-                <image src={{user[index].avatarUrl}} class="userImage"></image>
-                <view class="userName">{{user[index].nickname}}</view>
+                <image src={{userImage}} class="userImage"></image>
+                <view class="userName">{{userName}}</view>
                 <view class="userContent">{{card.beforeComment}}</view>
             </view>
             <textarea
@@ -40,8 +40,8 @@
             <view class="sendContent">{{card.notifyComment}}</view>
 
             <view class="userCard" bind:tap="toComment" data-id={{card.id}}>
-                <image src={{user[index].avatarUrl}} class="userImage"></image>
-                <view class="userName">{{user[index].nickname}}</view>
+                <image src={{userImage}} class="userImage"></image>
+                <view class="userName">{{userName}}</view>
                 <view class="userContent">{{card.beforeComment}}</view>
             </view>
             <textarea

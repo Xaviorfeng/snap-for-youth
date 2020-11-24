@@ -15,7 +15,6 @@
         "pages/detail/detail",
         "pages/smt-image-uploader/smt-image-uploader",
         "pages/others/others",
-        "pages/comment/comment",
         "pages/yuepai/yuepai",
         "pages/personal/personal",
         "pages/search/search",
@@ -38,23 +37,27 @@
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "iconPath": "./image/home.png",
-                "selectedIconPath": "./images/home-2.png"
+                "text":"主页",
+                "iconPath": "./image/tab/share.png",
+                "selectedIconPath": "./images/tab/share1.png"
             },
             {
                 "pagePath": "pages/yuepai/yuepai",
-                "iconPath": "./image/snap.png",
-                "selectedIconPath": "./images/snap-2.png"
+                "text":"约拍",
+                "iconPath": "./image/tab/snap.png",
+                "selectedIconPath": "./images/tab/snap1.png"
             },
             {
                 "pagePath": "pages/message/message",
-                "iconPath": "./image/Message.png",
-                "selectedIconPath": "./images/Message-2.png"
+                "text":"消息",
+                "iconPath": "./image/tab/message.png",
+                "selectedIconPath": "./images/tab/message1.png"
             },
             {
                 "pagePath": "pages/personal/personal",
-                "iconPath": "./image/profile.png",
-                "selectedIconPath": "./images/profile-2.png"
+                "text":"个人中心",
+                "iconPath": "./image/tab/my.png",
+                "selectedIconPath": "./images/tab/my1.png"
             }
         ]
     },

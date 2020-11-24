@@ -110,17 +110,19 @@ Page({
             method: 'POST',
             dataType: 'json',
             data:{
-                openId:openid
+                openId: openid
             },
             header: {
-                "Session-Key":session_key,
                 'content-type':'application/json'
             },
             success: function(res){
                 console.log(res.data);
-                // that.setData({
-                //     list:res.data.data.list,
-                // })
+                that.setData({
+                    userImage:res.data.data.avatarUrl,
+                    userName:res.data.data.nickname
+                })
+                console.log(that.data.userImage);
+                console.log(that.data.userName);
             },
             fail: function(err){
                 console.log('错误码: '+ err.errCode);

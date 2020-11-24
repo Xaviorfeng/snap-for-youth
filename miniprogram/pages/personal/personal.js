@@ -2,7 +2,7 @@ var openid = swan.getStorageSync("openid");
 var session_key = swan.getStorageSync("session_key");
 Page({
     data: {
-        tablist:["YUEPAI","SHARE","FOLLOW"],
+        tablist:["SNAP","SHARE","FOLLOW"],
         introduce:"一句话介绍一下自己吧",
         location:"点击获取地理位置",
         show:true,

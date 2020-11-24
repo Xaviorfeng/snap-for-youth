@@ -18,7 +18,7 @@ Page({
                     // 监听页面加载的生命周期函数
                 var that = this
                 swan.request({
-                    url: "https://baidu.woohoy.com/article",
+                    url: "https://baidu.woohoy.com/appointment",
                     method: 'GET',
                     dataType: 'json',
                     data:{},
