@@ -148,35 +148,59 @@ Page({
     })
   },
   //转发
-  transmit(e){
-    var session_key = app.globalData.session_key;
-    //console.log(e.currentTarget.dataset['index']);
-    console.log(e.currentTarget.dataset['id']);
+  onShareAppMessage() {
+    return {
+        title: '小程序标题',
+        content: '世界很复杂，百度更懂你',
+        imageUrl: 'https://b.bdstatic.com/miniapp/images/baidulogo1.jpg',
+        path: 'swan-api/open-share/open-share'
+    };
+},
+openShare(e) {
     const id = e.currentTarget.dataset['id'];
-    //console.log(this.data.love[index]);
-    //console.log(session_key);
-    var that = this
-    swan.request({
-        url: "https://baidu.woohoy.com/appointment/forward",
-        method: 'POST',
-        dataType: 'json',
-        data:{
-            id:id
+    swan.openShare({
+        title: '智能小程序示例',
+        content: '世界很复杂，百度更懂你',
+        path: 'swan-api/open-share/open-share?key=value',
+        imageUrl: 'https://smartprogram.baidu.com/docs/img/logo_new.png',
+        success: res => {
+            swan.showToast({
+                title: '分享成功',
+                icon: 'none'
+            });
+            console.log('openShare success', res);
         },
-        header: {
-            "Session-key":session_key,
-            'content-type': 'application/x-www-form-urlencoded'
-        },
-        success: function(res){
-            console.log(res.data);
-
-        },
-        fail: function(err){
-            console.log('错误码: '+ err.errCode);
-            console.log('错误信息: '+ err.errMsg);
-
+        fail: err => {
+            console.log('openShare fail', err);
         }
-    })
+    });
+},
+  transmit(e){
+    // var session_key = app.globalData.session_key;
+    // console.log(e.currentTarget.dataset['id']);
+    // const id = e.currentTarget.dataset['id'];
+    // var that = this
+    // swan.request({
+    //     url: "https://baidu.woohoy.com/appointment/forward",
+    //     method: 'POST',
+    //     dataType: 'json',
+    //     data:{
+    //         id:id
+    //     },
+    //     header: {
+    //         "Session-key":session_key,
+    //         'content-type': 'application/x-www-form-urlencoded'
+    //     },
+    //     success: function(res){
+    //         console.log(res.data);
+
+    //     },
+    //     fail: function(err){
+    //         console.log('错误码: '+ err.errCode);
+    //         console.log('错误信息: '+ err.errMsg);
+
+    //     }
+    // })
   },
   //发布
   toRelease(e){
@@ -265,22 +289,6 @@ Page({
             console.log('错误信息: '+ err.errMsg);
 
         }
-    })
-    // 获取用户信息
-    swan.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          swan.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
-          })
-        }
-      }
     })
   },
 

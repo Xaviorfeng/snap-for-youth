@@ -191,7 +191,7 @@ Page({
     onLoad: function (option) {
         console.log(option)
         this.setData({
-            id:option.userId,
+            id:option.id,
             islike:option.islike
         })
         this.loadlist()

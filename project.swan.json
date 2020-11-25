@@ -111,8 +111,8 @@
     "smartProgramRoot": "miniprogram/",
     "swan": {
         "baiduboxapp": {
-            "extensionJsVersion": "1.16.2",
-            "swanJsVersion": "3.210.115"
+            "swanJsVersion": "3.210.115",
+            "extensionJsVersion": "1.16.2"
         }
     }
 }
