@@ -55,9 +55,9 @@ swiper-custom{
     top:10px;
     left:20px;
     max-width: 400rpx;
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: nowrap; */
 
 }
 .content{

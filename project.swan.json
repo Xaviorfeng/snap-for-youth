@@ -98,6 +98,9 @@
     },
     "condition": {},
     "host": "baiduboxapp",
+    "preview": {
+        "packageId": 719950
+    },
     "projectname": "cloud-demo",
     "setting": {
         "urlCheck": false
@@ -105,8 +108,8 @@
     "smartProgramRoot": "miniprogram/",
     "swan": {
         "baiduboxapp": {
-            "swanJsVersion": "3.210.115",
-            "extensionJsVersion": "1.16.2"
+            "extensionJsVersion": "1.16.2",
+            "swanJsVersion": "3.210.115"
         }
     }
 }
