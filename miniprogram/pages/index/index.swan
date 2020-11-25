@@ -105,5 +105,5 @@
             </view>
             <!-- <release class="comment"></release> -->
         </block>
-    <image src="../../images/add.png" class="buttonimage" bind:tap="toRelease"></image>
+    <image src="/images/icon/添加.png" class="buttonimage" bind:tap="toRelease"></image>
 </view>

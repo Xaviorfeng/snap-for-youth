@@ -107,6 +107,7 @@ Page({
                 console.log('错误信息: '+ err.errMsg);
             }
         })
+        console.log(session_key);
         swan.request({
             url: "https://baidu.woohoy.com/notification/unread",
             method: 'GET',
@@ -117,7 +118,7 @@ Page({
                 'content-type':'application/json'
             },
             success: function(res){
-                //console.log(res.data);
+                console.log(res.data);
                 that.setData({
                     list:res.data.data.list,
                 })

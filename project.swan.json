@@ -99,9 +99,12 @@
     "condition": {},
     "host": "baiduboxapp",
     "preview": {
-        "packageId": 719950
+        "packageId": 720746
     },
     "projectname": "cloud-demo",
+    "publish": {
+        "version": "1.0.0"
+    },
     "setting": {
         "urlCheck": false
     },

@@ -110,6 +110,11 @@ page {
     left:10px;
     color: #9aa0a0;
     font-size:8px;
+    width: 200rpx;
+    max-width: 150rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .swiper-box {
@@ -282,14 +287,12 @@ page {
 }
 
 .buttonimage{
-    position:fixed;
-    background-color: #9aa0a0;
-    border-radius: 50%;
-    bottom:50px;
-    right:30px;
-    width:40px;
-    height:40px;
-    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    position: fixed;
+    z-index: 1000;
+    bottom: 35rpx;
+    right: 15rpx;
 }
 .comment{
     position:absolute;
